@@ -5,7 +5,7 @@
 }
 header{
     background-color: rgb(104, 211, 211);
-    height: 8rem;
+    height: 7rem;
 }
 .top-bar{
     
@@ -34,6 +34,108 @@ header{
     gap: 10px;
     cursor: pointer;
 }
+
+.main-section-1{
+    background-image: url(../asset/imagenes/imagen-principal.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top-center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center ;
+}
+.main-section-2{
+    background-color: rgb(255, 255, 255);
+}
+.item-1-section-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb( 249, 220, 75);
+    
+}
+.boton-1{
+    background-color: rgb( 249, 220, 75);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 13px;
+    width: 8rem;
+}
+.boton-2{
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 13px;
+    border: 1px solid rgb( 249, 220, 75);
+    width: 8rem;
+}
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .producto {
+    min-width: 100%;
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .producto img {
+    width: 55%;
+    height: 80%;
+    display: block;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .carousel-track {
+    animation: slide 20s infinite;
+  }
+  
 menu{
     padding-top: 1px solid red;
    
@@ -53,13 +155,22 @@ menu ul{
 }
 
 main{
-    background-color: beige;
-    height: 1rem;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.producto{
+    width: 30%;
+    height: auto;   
 }
 footer{
     background-color: blueviolet;
     height: 1rem;
-}@media (min-width: 576px){
+}
+@media (min-width: 576px){
     .grid-container{
         display: grid;
         grid-template-areas: 
@@ -67,23 +178,61 @@ footer{
         "b c"
         "d d" 
         ;
-        grid-auto-columns: 30% auto;
-    
+        grid-auto-columns: 30% auto;  
     }
     .top-bar{
         grid-area: a;
-
     }
     header{
         grid-area: b;
     }
-   
-   
     main{
         grid-area: c;
         min-height: 100vh;
     }
+   .carousel-track{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    animation: none;
+   }
+   .producto img{
+    width: 100%;
+   }
+   .main-section-1{
+    height: 50rem;
+   }
+   .main-section-2{
+    height: 100%;
+   }    
     footer{
         grid-area: d;
     }
 }
+@media (min-width: 1024px) {
+    .main-section-1 {
+      background-image: url(../asset/imagenes/imagen-principal.jpg), url(../asset/imagenes/galeria-3.jpg);
+      background-size: 50% 100%;
+      background-position: left center, right center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-end; 
+      height: 100vh; 
+      
+     }
+     .item-1-section-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb( 249, 220, 75);
+        padding-right: 8rem;       
+    }
+    .botones{
+        padding-right: 4.5rem;
+    }
+      
+         }
