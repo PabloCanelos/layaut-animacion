@@ -2,20 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+body{
+    overflow-x: hidden;
 }
 header{
-    background-color: rgb(104, 211, 211);
-    height: 7rem;
-}
-.top-bar{
+    background-color: rgba(45, 45, 45, 0.534);
+    height: 100%;
+    width: 100%;
+    color: #fff;
     
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: #fff;
-        height: 1.5rem;
-        width: 100%;
+}
+.top-bar{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    color: #ffffff;
+    height: 1.5rem;
+    width: 100%;
+   
+    
 }
 .item-header{
     display: flex;
@@ -24,6 +32,7 @@ header{
     align-items: center;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    
 }
 .navbar-top{
     display: flex;
@@ -34,9 +43,14 @@ header{
     gap: 10px;
     cursor: pointer;
 }
-
+.item-top-carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .main-section-1{
-    background-image: url(../asset/imagenes/imagen-principal.jpg);
+    background-image: url(../asset/img/imagenes/imagen-principal.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-position: top-center;
@@ -48,7 +62,9 @@ header{
     align-items: center ;
 }
 .main-section-2{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    height: 20rem;
+   
 }
 .item-1-section-1{
     display: flex;
@@ -57,6 +73,9 @@ header{
     align-items: center;
     color: rgb( 249, 220, 75);
     
+}
+.botones{
+    padding-bottom: 3rem;
 }
 .boton-1{
     background-color: rgb( 249, 220, 75);
@@ -108,7 +127,7 @@ header{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(45, 45, 45));
     color: white;
     padding: 10px;
     cursor: pointer;
@@ -135,14 +154,9 @@ header{
   .carousel-track {
     animation: slide 20s infinite;
   }
-  
-menu{
-    padding-top: 1px solid red;
-   
-}
 a{
     text-decoration: none;
-    color: #000;
+    color: rgb(45, 45, 45)0;
     cursor: pointer;
 }
 menu ul{
@@ -166,9 +180,50 @@ main{
     width: 30%;
     height: auto;   
 }
+.galeria-de-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.galeria-de-imagenes img{
+    width: 45%;
+    
+}
 footer{
-    background-color: blueviolet;
+    background-color: rgb(45, 45, 45);
     height: 1rem;
+}
+.rrss-link{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    gap: 1rem;
+    
+    
+}
+.rrss{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(45, 45, 45);
+    height: 4rem;
+    color: #fff;
+    gap: 5px;
+}
+.footer-correo{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(45, 45, 45);
+    height: 4rem;
 }
 @media (min-width: 576px){
     .grid-container{
@@ -204,7 +259,7 @@ footer{
     height: 50rem;
    }
    .main-section-2{
-    height: 100%;
+    height: auto;
    }    
     footer{
         grid-area: d;
@@ -212,7 +267,7 @@ footer{
 }
 @media (min-width: 1024px) {
     .main-section-1 {
-      background-image: url(../asset/imagenes/imagen-principal.jpg), url(../asset/imagenes/galeria-3.jpg);
+      background-image: url(../asset/img/imagenes/imagen-principal.jpg), url(../asset/img/bg-4.jpg);
       background-size: 50% 100%;
       background-position: left center, right center;
       background-repeat: no-repeat;
@@ -220,7 +275,7 @@ footer{
       flex-direction: column;
       justify-content: end;
       align-items: flex-end; 
-      height: 100vh; 
+      height: 25; 
       
      }
      .item-1-section-1{
